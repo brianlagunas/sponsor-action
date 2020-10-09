@@ -1,0 +1,17 @@
+name: 'Sponsor Action'
+description: 'Adds a sponsor label to issues opens by sponsors.'
+inputs:
+    label:
+      description: 'The label to apply to the issue or pull request if the author is a sponsor.'
+      default: 'sponsor 💖'
+    maintainers:
+      description: 'A list of maintainers that are sponsored'
+    github_token:
+      description: 'Token for the repo. Can be passed in using $\{{ secrets.GITHUB_TOKEN }}'
+      required: true
+outputs:
+  time: # id of output
+    description: 'The time we greeted you'
+runs:
+  using: 'node12'
+  main: 'src/index.js'
