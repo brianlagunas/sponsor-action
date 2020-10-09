@@ -1,23 +1,23 @@
 # Sponsor Action
 
-Add a label to pull requests and issues submitted by sponsors.
+Add a `sponsor 💖` label to pull requests and issues submitted by sponsors.
 
 ## Inputs
 
 ### `label`
 
-The label to apply to each issue or PR submitted by your sponsors.
+The label to apply to each issue or PR submitted by your sponsors. By default the label is `sponsor 💖`
 
 ### `maintainers`
 
-A comma separate list of project maintainers that can be sponsored.
+An optional comma separate list of project maintainers that can be sponsored on a single project.
 
 ### `github_token`
 
 GitHub automatically creates a GITHUB_TOKEN secret to use in your workflow. You use the GITHUB_TOKEN to authenticate the sponsor action workflow run.
 
 ## Example usage
-
+```
 on: 
   issues:
     types: [opened]
@@ -33,3 +33,4 @@ jobs:
       with:
         maintainers: 'brianlagunas,dansiegel'
         github_token: ${{ secrets.GITHUB_TOKEN }}
+```
